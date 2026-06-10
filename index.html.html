@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title> Bloods Street Gang </title>
+
+<style>
+body {
+    background: black;
+    color: #ff6666;
+    font-family: Arial;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    color: #ff0000;
+    text-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000;
+}
+
+h2 {
+    font-size: 30px;
+    color: #ff0000;
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+}
+
+.section {
+    margin: 40px;
+    padding: 20px;
+    border: 2px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ff0000;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* HOVER ZOOM (BLEIBT) */
+.section:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 50px #ff0000;
+}
+
+/* FACTIONS (BLEIBT 1:1) */
+.mara { color: #00aaff; text-shadow:0 0 10px #00aaff; }
+.grove { color: #00ff00; text-shadow:0 0 10px #00ff00; }
+.bloods { color: #ff0000; text-shadow:0 0 10px #ff0000; }
+.vagos { color: #ffff00; text-shadow:0 0 10px #ffff00; }
+.ballas { color: #aa00ff; text-shadow:0 0 10px #aa00ff; }
+.NG { color: #7CFC90; text-shadow:0 0 10px #4da6ff; }
+
+#startscreen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 70px;
+    color: #ff0000;
+    text-shadow: 0 0 30px #ff0000, 0 0 60px #ff0000;
+    animation: shake 0.8s infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(0px,0px); }
+    50% { transform: translate(4px,-4px); }
+    100% { transform: translate(0px,0px); }
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #ff0000;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+/* CONTENT */
+#content {
+    display:none;
+    opacity: 0;
+}
+
+/* ZOOM ENTER */
+.zoomOut {
+    animation: zoomOut 0.9s ease forwards;
+}
+
+@keyframes zoomOut {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* FADE IN */
+.fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* DIM MODE */
+.section.dim {
+    opacity: 0.15;
+    filter: blur(3px);
+    transform: scale(0.98);
+}
+
+/* FOCUS MODE (MITTEL-GROSSE CARD) */
+.section.focused {
+    position: relative;
+    width: 75%;
+    margin: 40px auto;
+    transform: scale(1.02);
+    z-index: 999;
+    opacity: 1 !important;
+    filter: blur(0px);
+    box-shadow: 0 0 90px #ff0000;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="startscreen">
+    <div class="title">Bloods Street Gang</div>
+    <button onclick="startApp()">ENTER</button>
+</div>
+
+<div id="content">
+
+<div class="section">
+<h1>Bewerbung als Leader der Bloods Street Gang</h1>
+<p><b>Name:</b> Erdo Cruz</p>
+</div>
+
+<div class="section">
+<h2>Informationen</h2>
+<p>
+OOC Name: Erdem <br>
+OOC Alter: 16 <br>
+Discord Name: erdo_2213 <br>
+IC Name: Erdo Cruz <br>
+ID: 202293 <br>
+Visum: 42
+</p>
+</div>
+
+<div class="section">
+<h2>Erfahrungen in verschiedenen Organisationen</h2>
+<p>
+Organisationen<br><br>
+
+<span class="mara">Mara: 10er + Turfer unter Shawn </span><br><br>
+<span class="bloods">Bloods: Vize + Turfer unter Yugi/Marvin </span><br><br>
+<span class="vagos">Vagos: 10er + Turfleader unter Marvin Benko </span><br><br>
+<span class="grove">Grove: 10er + Turfleader + Ausbildungsleitung + Beschwerdeleitung unter Markus </span><br><br>
+<span class="ballas">Ballas: Rang 10 unter Ali Bama</span><br><br>
+<span class="NG">NG: Rang 22 unter Karsten Boss</span>
+</p>
+</div>
+
+<div class="section">
+<h2>Warum ich Leader werden will</h2>
+<p>
+Die Bloods waren meine erste Crime-Organisation und deshalb haben sie für mich einen besonderen Stellenwert. Dort konnte ich viele Erfahrungen sammeln und mich bis zum Vize hocharbeiten, wodurch ich gelernt habe, Verantwortung zu übernehmen und eine Organisation zu führen. Für mich gehören die Bloods zu den stärksten Crime-Orgas, da sie nicht nur über viele aktive Member verfügen, sondern auch für ihre Stärke und Präsenz bekannt sind.
+Gerade deshalb bedeutet mir diese Organisation sehr viel. Ich möchte Verantwortung übernehmen und meinen Teil dazu beitragen, die Bloods weiter voranzubringen. Durch meine bisherigen Erfahrungen weiß ich, wie wichtig Struktur, Aktivität und Zusammenhalt sind. Ich bin überzeugt, dass die Organisation unter meiner Führung einen neuen Weg einschlagen und noch stärker auftreten kann. Mein Ziel ist es, die Bloods als aktive, respektierte und gefürchtete Organisation zu führen, die geschlossen auftritt und ihre Stärke auf der Straße zeigt
+</p>
+</div>
+
+<div class="section">
+<h2>Meine Ziele</h2>
+<p>
+Mein Ziel ist es, die Bloods wieder zu einer der dominantesten Organisationen im Ghetto zu machen. Wenn es Action im Ghetto gibt, soll jeder sofort wissen, dass die Bloods dabei sind. Unser Gebiet soll unser Gebiet bleiben und von uns kontrolliert werden.
+Außerdem möchte ich mit einer starken und aktiven Memberzahl Events wie Battleship dominieren und dort regelmäßig unsere Stärke unter Beweis stellen. Mir ist wichtig, dass die Organisation dauerhaft präsent ist, geschlossen auftritt und sowohl im Ghetto als auch bei anderen Aktivitäten respektiert wird.
+Gleichzeitig sollen die Member durch regelmäßige Events, Aktionen und gemeinsame Aktivitäten motiviert werden, damit die Bloods aktiv bleiben und ihren Ruf als starke und gefährliche Crime-Organisation weiter ausbauen.
+</p>
+</div>
+
+<div class="section">
+<h2>Meine Vorschläge fürs verbessern des Rollenspiels innerhalb der Organisation</h2>
+<p>
+Ghetto Präsenz<br>
+In letzter Zeit wird das Ghetto kaum noch respektiert, da immer mehr kleine Gruppen oder Familien denken, sie könnten dort einfach machen, was sie wollen. Genau das möchte ich ändern. Das Ghetto soll wieder ein Ort werden, an dem klare Verhältnisse herrschen und man sich Respekt verdienen muss.
+Dazu gehört für mich auch, dass das Zinken wieder zum täglichen Ablauf wird und die Organisation dauerhaft Präsenz zeigt. Neuankömmlinge sollen von Anfang an merken, dass das Ghetto kein Ort ist, an dem man sich sorglos bewegen kann. Mein Ziel ist es, wieder klare Dominanz aufzubauen und dafür zu sorgen, dass jeder weiß, wem die Straßen gehören.
+</p>
+</div>
+
+<div class="section">
+<h2>Ammu/Shop Robs</h2>
+<p>
+Ammu- und Shoprobs sollten für mich mindestens zwei Mal pro Woche stattfinden, da solche Aktionen das RP fördern und für mehr Aktivität zwischen Crime und State sorgen. Durch regelmäßige Überfälle entstehen spannende Situationen, Verhandlungen und Verfolgungen, die für beide Seiten interessant sind.
+Gleichzeitig können solche Aktionen auch dazu führen, dass wir das ein oder andere FIB-HQ-Raid provozieren, um der State zu zeigen, dass Crime präsent ist und sich nicht versteckt. Mein Ziel ist es, durch regelmäßige Aktionen mehr Spannung, Aktivität und Konkurrenz auf dem Server zu bringen.
+</p>
+</div>
+
+<div class="section">
+<h2>Was zeichnet mich aus</h2>
+<p>
+Als ich bei Grand angefangen habe, war es schon immer mein Ziel, einmal eine Organisation zu leiten. Im Laufe der Zeit habe ich mich stetig weiterentwickelt – zunächst als 10er und später als Turfleader. Dadurch konnte ich wertvolle Erfahrungen sammeln und letztendlich auch meine erste Position als Vize innerhalb der Bloods übernehmen. Ich fand, dass der damalige Leader Marvin Benko vieles gut umgesetzt hat und die Organisation grundsätzlich in eine solide Richtung geführt wurde. Dennoch gab es aus meiner Sicht auch Punkte, die gefehlt haben, insbesondere mehr Konsequenz und Durchsetzungsvermögen im Umgang mit Fehlern. Dazu gehören klare und strikte Regeln sowie konsequente Sanktionen wie beispielsweise Blacklists, um Disziplin und Struktur innerhalb der Organisation stärker zu fördern
+</p>
+</div>
+
+<div class="section">
+<h2>Rangkonzept</h2>
+<p>
+1. Hoodrat (Strafrang)<br>
+2. Prospect (Probe Mitglied)<br>
+3. Blood (Mitglied das sich beweist)<br>
+4. Lil Blood (Standard Gang Mitglied)<br>
+5. Big Blood (Erfahrener Kämpfer der gang)<br>
+6. OG Blood (Volles Mitglied inkl. Zinkrechte)<br><br>
+
+7. Turfer<br>
+8. Turflead<br>
+9. Instructor (Ausbilder)<br>
+10. Mastermind Gangster (Rechte Hand)<br>
+11. Vize OG (Co Leader)<br>
+12. OG (Leader)<br><br>
+
+Rang 7 und 8 sind für normale Member ausgeschlossen. Upranks kriegt man durch Aktivität.
+</p>
+</div>
+
+<div class="section">
+<h2>Fazit</h2>
+<p>
+Ich möchte Leader der Bloods werden, weil ich die Motivation, Erfahrung und den nötigen Respekt dafür mitbringe. Während meiner Zeit als Vize konnte ich bereits eng an der Führung mitarbeiten und miterleben, wie gut die Organisation funktioniert hat. Genau daran möchte ich anknüpfen und die Bloods konsequent weiterführen.
+Mein Ziel ist es, die Bloods nicht nur stabil zu halten, sondern sie weiter auszubauen und noch strukturierter sowie aktiver zu gestalten. Die Zeit als Vize hat mir gezeigt, was gut funktioniert hat – und wo noch Verbesserungspotenzial besteht. Besonders wichtig ist mir dabei mehr Konsequenz, klare Regeln und eine starke Präsenz der Gang im Ghetto sowie auf den Straßen.
+Ich möchte eine klare Führung bieten, in der Disziplin und Teamarbeit im Vordergrund stehen, gleichzeitig aber jeder die Möglichkeit hat, sich hochzuarbeiten. Die Bloods sollen als Einheit auftreten und wieder eine dominante Rolle im Ghetto einnehmen.
+Ich danke fürs Lesen.
+</p>
+</div>
+
+</div>
+
+<script>
+function startApp(){
+    const startscreen = document.getElementById("startscreen");
+    const content = document.getElementById("content");
+
+    startscreen.classList.add("zoomOut");
+
+    setTimeout(() => {
+        startscreen.style.display = "none";
+        content.style.display = "block";
+        content.classList.add("fadeIn");
+    }, 900);
+}
+
+/* CLICK FOCUS MODE */
+const sections = document.querySelectorAll(".section");
+
+sections.forEach(section => {
+    section.addEventListener("click", () => {
+
+        if (section.classList.contains("focused")) {
+            sections.forEach(s => {
+                s.classList.remove("dim");
+                s.classList.remove("focused");
+            });
+            return;
+        }
+
+        sections.forEach(s => {
+            s.classList.add("dim");
+            s.classList.remove("focused");
+        });
+
+        section.classList.remove("dim");
+        section.classList.add("focused");
+
+        section.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+});
+</script>
+
+</body>
+</html>
